@@ -9,6 +9,8 @@ import Advert from "../views/Advert";
 import Case from "../views/Case";
 import About from "../views/About";
 import Culture from "../views/Culture";
+import MsgBoard from "../components/MsgBoard";
+import Map from "../components/Map";
 
 Vue.use(VueRouter);
 
@@ -19,7 +21,23 @@ const routes = [
   { path: "/advert", name: "advert", component: Advert },
   { path: "/product", name: "product", component: Product },
   { path: "/case", name: "case", component: Case },
-  { path: "/about", name: "about", component: About },
+  {
+    path: "/about",
+    name: "about",
+    component: About,
+    children: [
+      {
+        path: "msgboard",
+        name: "msgboard",
+        component: MsgBoard
+      },
+      {
+        path: "map",
+        name: "map",
+        component: Map
+      }
+    ]
+  },
   { path: "/culture", name: "culture", component: Culture }
 ];
 

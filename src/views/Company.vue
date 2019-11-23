@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <div class="top-bar">
-      <img src="@/assets/imgs/ban.jpg" alt="">
+      <div class="top-img"></div>
     </div>
     <ul class="com-info-nav">
       <li>华美简介</li>
@@ -18,7 +18,21 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
   /*顶部图片*/
-  .top-bar{width: 100%;height: 400px;overflow: hidden;padding-right: 150px;}
+  .top-bar{ 
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 400px;
+    .top-img{
+      height: 100%;
+      width: 100%;
+      background: url("../assets/imgs/headimg/head1.jpg") no-repeat center center;
+      background-size: cover;
+    }
+  }
+  .com-info-nav{width: 100%;height: 100px;
+    li{float: left;margin: 15px;}
+  }
 </style>

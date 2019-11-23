@@ -1,6 +1,9 @@
 <template>
   <div class="news-bar">
-    新闻中心
+    <div class="top-bar">
+        <div class="top-img"></div>
+    </div>
+    <div>新闻中心</div>
   </div>
 </template>
 
@@ -13,6 +16,18 @@ export default {
 };
 </script>
 
-<style scoped lang="less">
-  
+<style lang="less" scoped>
+  /*顶部图片*/
+  .top-bar{ 
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 400px;
+    .top-img{
+      height: 100%;
+      width: 100%;
+      background: url("../assets/imgs/headimg/head2.jpg") no-repeat center center;
+      background-size: cover;
+    }
+  }
 </style>
